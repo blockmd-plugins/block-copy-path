@@ -1,0 +1,116 @@
+{
+  "app": "blockmd",
+  "schema_version": 1,
+  "id": "block-copy-path",
+  "name": {
+    "zh": "复制路径",
+    "en": "Copy Path"
+  },
+  "version": "1.0.0",
+  "beta": true,
+  "category": "tools",
+  "author": "eachann1024",
+  "repo": "eachann1024/block-copy-path",
+  "summary": {
+    "zh": "在页面菜单、标签页和文件树右键里复制文件路径，可选完整路径、相对路径或文件名",
+    "en": "Copy a file path from the page menu, tab or file tree, as a full path, relative path or file name"
+  },
+  "entry": {
+    "command": [
+      "python3",
+      "-u",
+      "main.py"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "ui:commands",
+    "ui:sidebar",
+    "notes:path",
+    "system:clipboard_write"
+  ],
+  "permission_reasons": {
+    "storage": {
+      "zh": "保存你选的复制格式",
+      "en": "Save the copy format you chose"
+    },
+    "ui:commands": {
+      "zh": "在页面菜单、标签页右键和快捷键 Cmd+Shift+C 中提供复制入口",
+      "en": "Add the copy action to the page menu, tab menu and the Cmd+Shift+C shortcut"
+    },
+    "ui:sidebar": {
+      "zh": "在文件树笔记与文件夹的右键菜单中提供复制入口",
+      "en": "Add the copy action to the file tree menu for notes and folders"
+    },
+    "notes:path": {
+      "zh": "拿到你右键或正在查看的文件路径，不读取内容",
+      "en": "Get the path of the file you right-clicked or are viewing, without reading it"
+    },
+    "system:clipboard_write": {
+      "zh": "把路径写入剪贴板",
+      "en": "Write the path to the clipboard"
+    }
+  },
+  "surfaces": [
+    "settings_page"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "copy_path",
+        "title": {
+          "zh": "复制文件路径",
+          "en": "Copy File Path"
+        },
+        "shortcut": "cmd-shift-c"
+      }
+    ],
+    "page_menu": [
+      {
+        "id": "copy_path",
+        "title": {
+          "zh": "复制文件路径",
+          "en": "Copy File Path"
+        },
+        "command": "copy_path"
+      }
+    ],
+    "tab_menu": [
+      {
+        "id": "copy_path",
+        "title": {
+          "zh": "复制文件路径",
+          "en": "Copy File Path"
+        },
+        "command": "copy_path"
+      }
+    ],
+    "sidebar_menu": [
+      {
+        "id": "copy_path",
+        "title": {
+          "zh": "复制路径",
+          "en": "Copy Path"
+        },
+        "command": "copy_path",
+        "targets": [
+          "note",
+          "folder"
+        ]
+      }
+    ]
+  },
+  "icon": {
+    "view_box": "0 0 24 24",
+    "fill_paths": [
+      "M10.25 8.25h7.5a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-7.5a2 2 0 0 1-2-2v-7.5a2 2 0 0 1 2-2Z"
+    ],
+    "stroke_paths": [
+      "M10.25 8.25h7.5a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-7.5a2 2 0 0 1-2-2v-7.5a2 2 0 0 1 2-2Z",
+      "M15.75 8.25V5.75a1.5 1.5 0 0 0-1.5-1.5h-8.5a1.5 1.5 0 0 0-1.5 1.5v8.5a1.5 1.5 0 0 0 1.5 1.5h2.5"
+    ],
+    "accent_paths": [
+      "M11.5 14h5"
+    ]
+  }
+}
