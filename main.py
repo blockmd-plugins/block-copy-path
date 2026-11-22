@@ -12,8 +12,6 @@ SETTINGS_PAGE_SURFACE = "settings_page"
 FORMATS = ("absolute", "relative", "name")
 DEFAULT_FORMAT = "absolute"
 COPY_COMMANDS = {"copy_path"}
-SAMPLE_FILE = os.path.join(os.path.expanduser("~"), "Notes", "Journal", "today.md")
-SAMPLE_REL = "Journal/today.md"
 CHINESE_TEXT = re.compile(r"[\u3000-\u303f\u4e00-\u9fff\uff00-\uffef]")
 
 
@@ -120,11 +118,22 @@ class CopyPathPlugin:
             "name": self._tr("文件名", "File name"),
         }[fmt]
 
+    def _sample_paths(self):
+        notebook, rel = (
+            ("Workspace", "Specs/api-design.md")
+            if self._is_en()
+            else ("团队文档", "架构/同步协议.md")
+        )
+        parts = ("Users", "alex", "Documents", notebook, *rel.split("/"))
+        abs_path = ("C:\\" + "\\".join(parts)) if os.name == "nt" else ("/" + "/".join(parts))
+        return abs_path, rel
+
     # ------------------------------------------------------------------ settings
 
     def _build_page(self):
-        sample_file = self.last_file or SAMPLE_FILE
-        sample_rel = self.last_rel if self.last_file else SAMPLE_REL
+        default_file, default_rel = self._sample_paths()
+        sample_file = self.last_file or default_file
+        sample_rel = self.last_rel if self.last_file else default_rel
         preview = self._render_path(self.format, sample_file, sample_rel)
         items = [
             {
