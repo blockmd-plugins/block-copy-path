@@ -124,8 +124,8 @@ class CopyPathPlugin:
             if self._is_en()
             else ("团队文档", "架构/同步协议.md")
         )
-        parts = ("Users", "alex", "Documents", notebook, *rel.split("/"))
-        abs_path = ("C:\\" + "\\".join(parts)) if os.name == "nt" else ("/" + "/".join(parts))
+        home = os.path.normpath(os.path.expanduser("~"))
+        abs_path = os.path.join(home, "Documents", notebook, *rel.split("/"))
         return abs_path, rel
 
     # ------------------------------------------------------------------ settings
