@@ -8,8 +8,8 @@
   },
   "version": "1.0.0",
   "category": "tools",
-  "author": "eachann1024",
-  "repo": "eachann1024/block-copy-path",
+  "author": "Block Community",
+  "repo": "blockmd-plugins/block-copy-path",
   "summary": {
     "zh": "在页面菜单、标签页和文件树右键里复制文件路径，可选完整路径、相对路径或文件名",
     "en": "Copy a file path from the page menu, tab or file tree, as a full path, relative path or file name"
