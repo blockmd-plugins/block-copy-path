@@ -22,25 +22,10 @@
     ]
   },
   "permissions": [
-    "storage",
-    "ui:commands",
-    "ui:sidebar",
     "notes:path",
     "system:clipboard_write"
   ],
   "permission_reasons": {
-    "storage": {
-      "zh": "保存你选的复制格式",
-      "en": "Save the copy format you chose"
-    },
-    "ui:commands": {
-      "zh": "在页面菜单、标签页右键和快捷键 Cmd+Shift+C 中提供复制入口",
-      "en": "Add the copy action to the page menu, tab menu and the Cmd+Shift+C shortcut"
-    },
-    "ui:sidebar": {
-      "zh": "在文件树笔记与文件夹的右键菜单中提供复制入口",
-      "en": "Add the copy action to the file tree menu for notes and folders"
-    },
     "notes:path": {
       "zh": "拿到你右键或正在查看的文件路径，不读取内容",
       "en": "Get the path of the file you right-clicked or are viewing, without reading it"
