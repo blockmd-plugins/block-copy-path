@@ -1,4 +1,8 @@
-# Copy Path
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-en-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-en-light.png">
+  <img alt="Copy Path" src="assets/card-en-light.png">
+</picture>
 
 - **Copy from anywhere**: the page "..." menu, the tab context menu, the file tree context menu (notes and folders), or press `Cmd+Shift+C`.
 - **Three formats**: full path, path relative to the notebook, or file name only. Switch in the plugin settings page and see a live preview below.

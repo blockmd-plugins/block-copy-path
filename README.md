@@ -1,4 +1,8 @@
-# 复制路径
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-zh-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-zh-light.png">
+  <img alt="复制路径" src="assets/card-zh-light.png">
+</picture>
 
 - **哪里都能复制**：页面右上角「…」菜单、标签页右键、文件树右键（笔记和文件夹都行），或直接按 `Cmd+Shift+C`。
 - **三种格式**：完整路径、笔记本内的相对路径、只要文件名，在本插件设置页切换，下方即时预览效果。
