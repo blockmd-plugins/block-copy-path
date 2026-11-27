@@ -11,15 +11,11 @@
   "author": "Block Community",
   "repo": "blockmd-plugins/block-copy-path",
   "summary": {
-    "zh": "在页面菜单、标签页和文件树右键里复制文件路径，可选完整路径、相对路径或文件名",
-    "en": "Copy a file path from the page menu, tab or file tree, as a full path, relative path or file name"
+    "zh": "像 VS Code 一样一键复制笔记或文件夹路径，方便贴给终端或 AI 助手",
+    "en": "Copy a note or folder path in one click like VS Code, ready to paste into terminals or AI"
   },
   "entry": {
-    "command": [
-      "python3",
-      "-u",
-      "main.py"
-    ]
+    "js": "main.js"
   },
   "permissions": [
     "storage",
@@ -30,24 +26,24 @@
   ],
   "permission_reasons": {
     "storage": {
-      "zh": "保存你选的复制格式",
-      "en": "Save the copy format you chose"
+      "zh": "记住你常用的路径复制格式",
+      "en": "Remember your preferred path copy format"
     },
     "ui:commands": {
-      "zh": "在页面菜单、标签页右键和快捷键 Cmd+Shift+C 中提供复制入口",
-      "en": "Add the copy action to the page menu, tab menu and the Cmd+Shift+C shortcut"
+      "zh": "在页面菜单、标签页右键和快捷键 Cmd+Shift+C 中添加复制入口",
+      "en": "Add the copy action to the page menu, tab menu, and Cmd+Shift+C shortcut"
     },
     "ui:sidebar": {
-      "zh": "在文件树笔记与文件夹的右键菜单中提供复制入口",
-      "en": "Add the copy action to the file tree menu for notes and folders"
+      "zh": "在侧栏笔记和文件夹的右键菜单中添加复制入口",
+      "en": "Add the copy action to the sidebar right-click menu for notes and folders"
     },
     "notes:path": {
-      "zh": "拿到你右键或正在查看的文件路径，不读取内容",
-      "en": "Get the path of the file you right-clicked or are viewing, without reading it"
+      "zh": "获取当前选中或打开的笔记、文件夹文件路径",
+      "en": "Get the file path of the selected or currently open note or folder"
     },
     "system:clipboard_write": {
-      "zh": "把路径写入剪贴板",
-      "en": "Write the path to the clipboard"
+      "zh": "把复制的路径写入系统剪贴板",
+      "en": "Write the copied path to the system clipboard"
     }
   },
   "surfaces": [
